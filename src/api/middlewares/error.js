@@ -34,8 +34,9 @@ exports.converter = (err, req, res, next) => {
     const errors = err.errors.map(e => ({
       location: e.location,
       messages: e.messages,
-      field: e.field,
+      field: e.field[0],
     }));
+    console.log(errors);
     convertedError = new APIError({
       message: 'Validation Error',
       errors,
