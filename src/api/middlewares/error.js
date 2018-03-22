@@ -36,7 +36,6 @@ exports.converter = (err, req, res, next) => {
       messages: e.messages,
       field: e.field[0],
     }));
-    console.log(errors);
     convertedError = new APIError({
       message: 'Validation Error',
       errors,
@@ -50,7 +49,6 @@ exports.converter = (err, req, res, next) => {
       stack: err.stack,
     });
   }
-
   return handler(convertedError, req, res);
 };
 

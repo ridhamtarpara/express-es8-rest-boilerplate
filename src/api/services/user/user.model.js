@@ -193,8 +193,7 @@ userSchema.statics = {
    * @returns {Error|APIError}
    */
   checkDuplicateEmail(error) {
-    console.log(error.name, error.code);
-    if (error.name === 'BulkWriteError' && error.code === 11000) {
+    if (error.code === 11000 && (error.name === 'BulkWriteError' || error.name === 'MongoError')) {
       return new APIError({
         message: 'Validation Error',
         errors: [{
@@ -207,7 +206,6 @@ userSchema.statics = {
         stack: error.stack,
       });
     }
-    console.log({ error });
     return error;
   },
 

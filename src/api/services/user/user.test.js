@@ -407,6 +407,25 @@ describe('Users API', async () => {
           expect(res.body.role).to.not.be.equal(role);
         });
     });
+
+    it('should not assign the already existing email', async () => {
+      delete dbUsers.branStark.password;
+      const id = (await User.findOne(dbUsers.branStark))._id;
+      user.email = dbUsers.jonSnow.email;
+      return request(app)
+        .put(`/v1/users/${id}`)
+        .set('Authorization', `Bearer ${adminAccessToken}`)
+        .send(user)
+        .expect(httpStatus.CONFLICT)
+        .then((res) => {
+          const { field } = res.body.errors[0];
+          const { location } = res.body.errors[0];
+          const { messages } = res.body.errors[0];
+          expect(field).to.be.equal('email');
+          expect(location).to.be.equal('body');
+          expect(messages).to.include('"email" already exists');
+        });
+    });
   });
 
   describe('PATCH /v1/users/:userId', () => {
@@ -475,6 +494,25 @@ describe('Users API', async () => {
         .expect(httpStatus.OK)
         .then((res) => {
           expect(res.body.role).to.not.be.equal(role);
+        });
+    });
+
+    it('should not assign the already existing email', async () => {
+      delete dbUsers.branStark.password;
+      const id = (await User.findOne(dbUsers.branStark))._id;
+      user.email = dbUsers.jonSnow.email;
+      return request(app)
+        .patch(`/v1/users/${id}`)
+        .set('Authorization', `Bearer ${adminAccessToken}`)
+        .send(user)
+        .expect(httpStatus.CONFLICT)
+        .then((res) => {
+          const { field } = res.body.errors[0];
+          const { location } = res.body.errors[0];
+          const { messages } = res.body.errors[0];
+          expect(field).to.be.equal('email');
+          expect(location).to.be.equal('body');
+          expect(messages).to.include('"email" already exists');
         });
     });
   });
@@ -549,6 +587,14 @@ describe('Users API', async () => {
           expect(res.body.message).to.be.equal('jwt expired');
           expect(res.body).to.not.have.a.property('stack');
         });
+    });
+  });
+
+  describe('GET /v1/not-found', () => {
+    it('should return 404', () => {
+      return request(app)
+        .get('/v1/not-found')
+        .expect(httpStatus.NOT_FOUND);
     });
   });
 });

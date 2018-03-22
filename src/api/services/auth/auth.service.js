@@ -28,7 +28,6 @@ exports.register = async (userData) => {
     const token = generateTokenResponse(user, user.token());
     return { token, user: userTransformed };
   } catch (error) {
-    console.log(123);
     throw User.checkDuplicateEmail(error);
   }
 };

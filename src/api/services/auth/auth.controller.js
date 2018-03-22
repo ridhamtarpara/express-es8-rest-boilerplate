@@ -10,7 +10,6 @@ exports.register = async (req, res, next) => {
     const response = await service.register(req.body);
     return res.status(httpStatus.CREATED).json(response);
   } catch (error) {
-    console.log(error);
     return next(error);
   }
 };
