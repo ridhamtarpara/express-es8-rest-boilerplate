@@ -20,6 +20,8 @@ env:
     - JWT_EXPIRATION_MINUTES=15
     - MONGO_URI=mongodb://travis:test@localhost:27017/express-es8-rest-boilerplate
     - MONGO_URI_TESTS=mongodb://travis:test@localhost:27017/express-es8-rest-boilerplate
+    - RATE_LIMIT_TIME=1
+    - RATE_LIMIT_REQUEST=2000
 
 script: yarn validate
 
