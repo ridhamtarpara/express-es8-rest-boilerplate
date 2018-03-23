@@ -63,3 +63,15 @@ exports.notFound = (req, res, next) => {
   });
   return handler(err, req, res);
 };
+
+/**
+ * Catch 429 ratelimit exceeded
+ * @public
+ */
+exports.rateLimitHandler = (req, res, next) => {
+  const err = new APIError({
+    message: 'Rate limt exceeded, please try again later some time.',
+    status: httpStatus.TOO_MANY_REQUESTS,
+  });
+  return handler(err, req, res);
+};

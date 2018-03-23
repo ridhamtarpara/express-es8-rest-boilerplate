@@ -71,6 +71,7 @@
     "cross-env": "^5.0.1",
     "dotenv-safe": "^5.0.1",
     "express": "^4.15.2",
+    "express-rate-limit": "^2.11.0",
     "express-validation": "^1.0.2",
     "helmet": "^3.5.0",
     "http-status": "^1.0.1",
