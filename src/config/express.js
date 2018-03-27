@@ -44,6 +44,8 @@ passport.use('jwt', strategies.jwt);
 passport.use('facebook', strategies.facebook);
 passport.use('google', strategies.google);
 
+app.use('/docs', express.static('docs'));
+
 // enable rate limit
 app.use(rateLimiter());
 
