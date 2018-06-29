@@ -1,8 +1,7 @@
 # Node.js - Express, MongoDB, ES2017 REST API Boilerplate
 
-[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com) [![Build Status](https://travis-ci.org/ridhamtarpara/express-es8-rest-boilerplate.svg?branch=master)](https://travis-ci.org/ridhamtarpara/express-es8-rest-boilerplate) [![Coverage Status](https://coveralls.io/repos/github/ridhamtarpara/express-es8-rest-boilerplate/badge.svg?branch=master)](https://coveralls.io/github/ridhamtarpara/express-es8-rest-boilerplate?branch=master) [![bitHound Dependencies](https://www.bithound.io/github/ridhamtarpara/express-es8-rest-boilerplate/badges/dependencies.svg)](https://www.bithound.io/github/ridhamtarpara/express-es8-rest-boilerplate/master/dependencies/npm) [![bitHound Overall Score](https://www.bithound.io/github/ridhamtarpara/express-es8-rest-boilerplate/badges/score.svg)](https://www.bithound.io/github/ridhamtarpara/express-es8-rest-boilerplate) [![Greenkeeper badge](https://badges.greenkeeper.io/ridhamtarpara/express-es8-rest-boilerplate.svg)](https://greenkeeper.io/)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com) [![Build Status](https://travis-ci.org/ridhamtarpara/express-es8-rest-boilerplate.svg?branch=master)](https://travis-ci.org/ridhamtarpara/express-es8-rest-boilerplate) [![Coverage Status](https://coveralls.io/repos/github/ridhamtarpara/express-es8-rest-boilerplate/badge.svg?branch=master)](https://coveralls.io/github/ridhamtarpara/express-es8-rest-boilerplate?branch=master) [![Greenkeeper badge](https://badges.greenkeeper.io/ridhamtarpara/express-es8-rest-boilerplate.svg)](https://greenkeeper.io/)
 
-> Take a demo at http://13.58.200.57:3000/docs/
 
 ## Features
  - Uses [yarn](https://yarnpkg.com)
