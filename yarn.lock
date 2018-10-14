@@ -2282,9 +2282,9 @@ istanbul-reports@^1.4.1:
   dependencies:
     handlebars "^4.0.3"
 
-joi@^13.1.2:
-  version "13.1.2"
-  resolved "https://registry.yarnpkg.com/joi/-/joi-13.1.2.tgz#b2db260323cc7f919fafa51e09e2275bd089a97e"
+joi@^14.0.0:
+  version "14.0.0"
+  resolved "https://registry.yarnpkg.com/joi/-/joi-14.0.0.tgz#05a206b259e702f426eb2b2e523d642fb383e6ad"
   dependencies:
     hoek "5.x.x"
     isemail "3.x.x"
