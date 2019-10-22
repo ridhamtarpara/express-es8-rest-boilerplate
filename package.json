@@ -73,7 +73,7 @@
     "express": "^4.15.2",
     "express-rate-limit": "^3.0.0",
     "express-validation": "^1.0.2",
-    "helmet": "^3.5.0",
+    "helmet": "^3.21.2",
     "http-status": "^1.0.1",
     "joi": "^14.0.0",
     "jwt-simple": "0.5.1",
